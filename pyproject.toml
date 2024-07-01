@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=70.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mbedext"
+version = "0.0.1"
+authors = [
+  { name="Ahmed Kooli", email="ahmed.kooli@hotmail.fr" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/ahmedkooli/mbedext"
