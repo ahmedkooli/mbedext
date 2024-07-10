@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mbedext"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Ahmed Kooli", email="ahmed.kooli@hotmail.fr" },
 ]
-description = "A small example package"
+description = "Visualize and cluster your text in a modular way"
 readme = "README.md"
 requires-python = ">=3.11"
 classifiers = [
