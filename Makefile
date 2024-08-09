@@ -11,6 +11,10 @@ py-clean:
 py-build:
 	python3 -m build
 
+.PHONY: py-install
+py-install:
+	pip install --force-reinstall --no-dependencies dist/mbedext-0.0.4-py3-none-any.whl
+
 .PHONY: py-upload
 py-upload:
 	twine upload $(DIST_DIR)/*

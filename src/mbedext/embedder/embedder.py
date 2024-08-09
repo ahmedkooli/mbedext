@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class Embedder:
+class Embedder(ABC):
     def __init__(self, model, text) -> None:
         self.model = model
         self.text = text

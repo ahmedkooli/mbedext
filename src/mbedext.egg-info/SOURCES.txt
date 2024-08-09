@@ -7,6 +7,7 @@ src/mbedext/utils.py
 src/mbedext.egg-info/PKG-INFO
 src/mbedext.egg-info/SOURCES.txt
 src/mbedext.egg-info/dependency_links.txt
+src/mbedext.egg-info/requires.txt
 src/mbedext.egg-info/top_level.txt
 src/mbedext/clusterer/__init__.py
 src/mbedext/clusterer/clusterer.py
