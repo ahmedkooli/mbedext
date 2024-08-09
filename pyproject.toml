@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mbedext"
-version = "0.0.5"
+version = "0.0.6"
 authors = [
   { name="Ahmed Kooli", email="ahmed.kooli@hotmail.fr" },
 ]
@@ -19,7 +19,8 @@ dependencies = [
   "pandas~=2.2.2",
   "scikit-learn~=1.5.0",
   "plotly~=5.22.0",
-  "numpy~=2.0.1"
+  "numpy~=1.26.4",
+  "accelerate~=0.33.0"
 ]
 classifiers = [
     "Programming Language :: Python :: 3",

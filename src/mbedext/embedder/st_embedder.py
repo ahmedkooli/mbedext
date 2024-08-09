@@ -3,7 +3,7 @@ from typing import Union, Optional
 from .embedder import Embedder
 
 class STEmbedder(Embedder):
-    def __init__(self, model, text) -> None:
+    def __init__(self, model, text, *args, **kwargs) -> None:
         super().__init__(model, text)
 
     def embed(self, batch: Union[list[str], str], batch_size: Optional[int] = 256):

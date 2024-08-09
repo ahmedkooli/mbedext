@@ -13,7 +13,7 @@ py-build:
 
 .PHONY: py-install
 py-install:
-	pip install --force-reinstall --no-dependencies dist/mbedext-0.0.4-py3-none-any.whl
+	pip install --force-reinstall --no-dependencies dist/mbedext-0.0.5-py3-none-any.whl
 
 .PHONY: py-upload
 py-upload:
