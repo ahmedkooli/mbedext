@@ -10,11 +10,11 @@ def set_device(dev: Optional[str] = None):
     return torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
 
 
-def batch_embed(embedder, dev, batch_size=256):
+def batch_embed(embedder, *args, dev=None, batch_size=256, **kwargs):
     embeddings = []
     for i in tqdm(range(0, len(embedder.text), batch_size), leave=False):
         batch = embedder.text[i:i+batch_size]
-        embeddings.append(embedder.embed(batch))
+        embeddings.append(embedder.embed(batch, *args, **kwargs))
 
     embeddings = torch.cat(embeddings, dim=0)
     

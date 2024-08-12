@@ -17,7 +17,7 @@ class Mbedder:
         self.dev = set_device(dev)
 
 
-    def embed(self, model):
+    def embed(self, model, *args, **kwargs):
         if isinstance(model, SentenceTransformer):
             embedder = STEmbedder(model, self.text)
         elif isinstance(model, PreTrainedModel):
@@ -25,7 +25,7 @@ class Mbedder:
         else:
             raise NotImplementedError
         
-        self.embeddings = batch_embed(embedder, self.dev) # TODO convert to method of Embedder
+        self.embeddings = batch_embed(embedder, *args, dev=self.dev, **kwargs) # TODO convert to method of Embedder
 
 
     def reduce(self, model):
