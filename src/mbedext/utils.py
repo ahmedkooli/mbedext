@@ -16,10 +16,7 @@ def batch_embed(embedder, *args, dev=None, batch_size=256, **kwargs):
         batch = embedder.text[i:i+batch_size]
         embeddings.append(embedder.embed(batch, *args, **kwargs))
 
+    # if isinstance(embeddings[0], torch.Tensor):
+    # TODO MARCHE PAS POUR CPU pur l'instant (ah bon why?)
     embeddings = torch.cat(embeddings, dim=0)
-    
-    if dev.type == "mps":
-        torch.mps.empty_cache()
-    if dev.type == "cuda":
-        torch.cuda.empty_cache()
     return embeddings

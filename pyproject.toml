@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mbedext"
-version = "0.0.7"
+version = "0.0.11"
 authors = [
   { name="Ahmed Kooli", email="ahmed.kooli@hotmail.fr" },
 ]

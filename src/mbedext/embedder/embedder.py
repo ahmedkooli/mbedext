@@ -1,3 +1,4 @@
+import gc
 from abc import ABC, abstractmethod
 from typing import Optional
 
@@ -24,3 +25,12 @@ class Embedder(ABC):
             return torch.device("cuda")
         else:
             return torch.device("cpu")
+
+    def empty_cache(self):
+        gc.collect()
+        if self.dev.type == "cuda":
+            torch.cuda.empty_cache()
+            torch.cuda.reset_peak_memory_stats()
+        elif self.dev.type == "mps":
+            torch.mps.empty_cache()
+        
